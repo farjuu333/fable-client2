@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client.js";
 import Logo from "@/image/logo.png";
 import Image from "next/image";
+import { ImBook } from "react-icons/im";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,16 +48,9 @@ const Navbar = () => {
           {/* Logo */}
 
           <Link href="/" className="flex items-center ">
-            <Image
-              src={Logo}
-              width={40}
-              height={40}
-              alt="Fable"
-              className="h-10 w-auto"
-              onError={(e) => {
-                e.target.style.display = "none";
-              }}
-            />
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0070F3]/10 text-[#0070F3]">
+                  <ImBook className="text-xl" />
+                </div>
             <span className="text-2xl font-bold text-indigo-600">Fable</span>
           </Link>
 
